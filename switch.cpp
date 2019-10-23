@@ -5,27 +5,27 @@ int main()
 	setlocale(LC_ALL,"Turkish");
 	double x,y;
 	int z;
-	cout<<"Birinci sayýyý giriniz:";
+	cout<<"Birinci sayÃ½yÃ½ giriniz:";
 	cin>>x;
-	cout<<"Ýkinci sayýyý giriniz:";
+	cout<<"Ãkinci sayÃ½yÃ½ giriniz:";
 	cin>>y;
-	cout<<"Ýþleminizi seçiniz:\nToplama için 1\nÇýkarma için 2\nÇarpma için 3\nBölme için 4"<<endl;
+	cout<<"ÃÃ¾leminizi seÃ§iniz:\nToplama iÃ§in 1\nÃ‡Ã½karma iÃ§in 2\nÃ‡arpma iÃ§in 3\nBÃ¶lme iÃ§in 4"<<endl;
 	cin>>z;
 	switch(z){
 		case 1: {
-			cout<<"Sonuç:"<<x+y<<endl;
+			cout<<"SonuÃ§:"<<x+y<<endl;
 			break;
 		}
 		case 2: {
-			cout<<"Sonuç:"<<x-y<<endl;
+			cout<<"SonuÃ§:"<<x-y<<endl;
 			break;
 		}
 		case 3: {
-			cout<<"Sonuç:"<<x*y<<endl;
+			cout<<"SonuÃ§:"<<x*y<<endl;
 			break;
 		}
 		case 4: {
-			cout<<"Sonuç:"<<x/y<<endl;
+			cout<<"SonuÃ§:"<<x/y<<endl;
 			break;
 		}
 		default: {
