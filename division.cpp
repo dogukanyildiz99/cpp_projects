@@ -11,14 +11,14 @@ setlocale(LC_ALL,"Turkish");
     cout<<i<<" "; 
     if(i%7==0) 
     {   
-	cout<<"\tBölünebilir"; 
+	cout<<"\tBÃ¶lÃ¼nebilir"; 
 	toplam=i+toplam; 
     cout<<" \t"<<toplam<<endl; 
 	sayac=sayac+1;
     } 
     else 
     {
-    cout<<"\tBölünemez"<<endl; 
+    cout<<"\tBÃ¶lÃ¼nemez"<<endl; 
     } 
 }
     ortalama=toplam/sayac; 
