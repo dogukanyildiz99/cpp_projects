@@ -13,7 +13,7 @@ int main()
 	
 	for(int i=0; i<20; i++)
 	dizi[i]=rand()%10+27;	
-	cout<<"Eleman"<<setw(14)<<"Deðer"<<endl;
+	cout<<"Eleman"<<setw(14)<<"DeÃ°er"<<endl;
 	
 	for(int j=0; j<20; j++)
 	{
@@ -26,7 +26,7 @@ int main()
     	dizi[0] = dizi[i];
 	}
     
-    cout<<"\n En büyük sayý: "<<dizi[0]<<endl;
+    cout<<"\n En bÃ¼yÃ¼k sayÃ½: "<<dizi[0]<<endl;
 
 	for(int i=0; i<20; i++) //have to find a way to use it in func
 	{
@@ -34,7 +34,7 @@ int main()
     	dizi[0] = dizi[i];
 	}
 	
-	cout<<"\n En küçük sayý: "<<dizi[0]<<endl;	
+	cout<<"\n En kÃ¼Ã§Ã¼k sayÃ½: "<<dizi[0]<<endl;	
 
 	for(int i=0;i<20-1;i++) // to sort numbers 
 	{
@@ -48,7 +48,7 @@ int main()
 			} 
 		}
 	}
-	cout<<"\n Küçükten büyüðe sýralama: "<<endl<<endl;
+	cout<<"\n KÃ¼Ã§Ã¼kten bÃ¼yÃ¼Ã°e sÃ½ralama: "<<endl<<endl;
 	for (int i=0;i<20;i++)
 	cout<<" "<<dizi[i]<<" ";
 	
