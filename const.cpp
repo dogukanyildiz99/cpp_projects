@@ -2,7 +2,7 @@
 using namespace std;
 int main()
 {
-	const int X = 10; //ilk değer atanmış sabit
+	const int X = 10;
 	int a[X]={ 87,68,94,100,83,78,85,91,76,87};
 	int sum=0;
 	
