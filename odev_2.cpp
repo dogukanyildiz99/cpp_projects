@@ -1,41 +1,38 @@
+//Dogukan YILDIZ 18332629024 Odev-2
 #include <iostream>
 using namespace std;
 
-int Palindrom(string, int, int);	//Bu kodda Fonksiyon yardýmý ile palindrom bulacaðýz.
-
-int main()
+int CharCheck(int firstChar, int lastChar, string word)
 {
-	setlocale(LC_ALL,"Turkish");
-	int sonKarakter;
-	string kelime;
-	
-	cout << "Bir kelime girin: ";	//Kelimenin nokta ile bitmesine gerek yok.
-	cin >>kelime;
-	
-	sonKarakter = kelime.length();	//Kelimenin uzunluðu
-	Palindrom(kelime, 0, sonKarakter-1);
-}
-
-int Palindrom(string kelime, int ilkKarakter, int sonKarakter)	//Fonksiyonumuz.
-{
-	if(kelime[ilkKarakter] == kelime[sonKarakter])	//Kontroller
+	if(word[firstChar]==word[lastChar])
 	{
-		if(sonKarakter > ilkKarakter)
+		if(firstChar>lastChar)
 		{
-		Palindrom(kelime, ilkKarakter+1, sonKarakter-1);
+			CharCheck(firstChar+1,lastChar-1,word);
 		}
 		else
 		{
-		cout <<"Bu kelimenin tersten okunuþu aynýdýr!"; 
+			cout <<"\nThe reverse spelling of this word is the same!"<<endl;
 		}
-	}
-	
+	}	
 	else
 	{
-	cout <<"Bu kelimenin tersten okunuþu ayný deðildir!";
+		cout <<"\nThe reverse spelling of this word is not the same!"<<endl;
 	}
+		
+	return 0;
+}
+
+int main()
+{
+	int lastChar,firstChar;
+	string word;
+
+	cout<<"Enter a word to check: ";
+	cin>>word;
+
+	lastChar=word.length();
+	CharCheck(0,lastChar-1,word);
 	
-	cout << "\n\n";
-	
-return main();
+	return 0;
 }

@@ -1,42 +1,34 @@
+//Dogukan YILDIZ 18332629024 Odev-1
 #include <iostream>
-#include <iomanip> //to use setw
+#include <iomanip>
 #include <cstdlib>
-#include <ctime> //to use srand
+#include <ctime>
 using namespace std;
+
+int BiggestNumber(int [],int);
+int SmallestNumber(int [],int);
 
 int main()
 {
-	setlocale(LC_ALL,"Turkish"); //to use Turkish language
 	int dizi[20];
 	int enBuyuk, enKucuk,temp;
-	srand(time(0)); //to get different elements in every run
+	srand(time(0));
 	
 	for(int i=0; i<20; i++)
-	dizi[i]=rand()%10+27;	
-	cout<<"Eleman"<<setw(14)<<"Deðer"<<endl;
+	dizi[i]=rand()%10+27;
+		
+	cout<<"Element"<<setw(14)<<"Value"<<endl;
 	
 	for(int j=0; j<20; j++)
 	{
 		cout<<setw(3)<<j+1<<setw(16)<<dizi[j]<<endl;
 	}
 	
-	for(int i=0; i<20; i++)  //have to find a way to use it in func
-	{
-		if(dizi[0] < dizi[i])
-    	dizi[0] = dizi[i];
-	}
-    
-    cout<<"\n En büyük sayý: "<<dizi[0]<<endl;
-
-	for(int i=0; i<20; i++) //have to find a way to use it in func
-	{
-		if(dizi[0] > dizi[i])
-    	dizi[0] = dizi[i];
-	}
+	cout<<"\n Biggest number: "<<BiggestNumber(dizi,20)<<endl;
 	
-	cout<<"\n En küçük sayý: "<<dizi[0]<<endl;	
+	cout<<"\n Smallest number: "<<SmallestNumber(dizi,20)<<endl;
 
-	for(int i=0;i<20-1;i++) // to sort numbers 
+	for(int i=0;i<20-1;i++) //syralama
 	{
 		for(int j=0;j<20-1;j++) 
 		{ 
@@ -48,11 +40,35 @@ int main()
 			} 
 		}
 	}
-	cout<<"\n Küçükten büyüðe sýralama: "<<endl<<endl;
+	
+	cout<<"\n Listing by ascending value: "<<endl<<endl;
+	
 	for (int i=0;i<20;i++)
 	cout<<" "<<dizi[i]<<" ";
 	
-	return 0;
+	return 0;	
+}
+
+//fonksiyonlar
+
+int BiggestNumber(int dizi[], int n)
+{
+	for (int i=0; i<20; i++)
+	{
+		if (dizi[0]<dizi[i])
+    	dizi[0]=dizi[i];
+	}
 	
+return dizi [0] ;
+}
+ 
+int SmallestNumber(int dizi[], int n)
+{
+	for (int j=0; j<20; j++)
+	{
+		if (dizi[0]>dizi[j])
+    	dizi[0]=dizi[j] ;
+	}
+return dizi [0] ;
 }
 
