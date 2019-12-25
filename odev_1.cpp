@@ -11,7 +11,7 @@ int SmallestNumber(int [],int);
 int main()
 {
 	int dizi[20];
-	int enBuyuk, enKucuk,temp;
+	int temp;
 	srand(time(0));
 	
 	for(int i=0; i<20; i++)
